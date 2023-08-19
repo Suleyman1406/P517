@@ -1,0 +1,55 @@
+body {
+  background-color: #9cd1e6;
+}
+
+div {
+  /* width: 200px;
+  height: 200px; */
+  /* background-color: red; */
+  /* border: 10px double rgb(183, 25, 25); */
+  /* border: solid; */
+  /* border-width: 5px; */
+  /* border-style: dashed; */
+  /* border-color: red; */
+  /* border: 2px solid black; */
+  /* border-radius: 50%; */
+}
+/* 
+.card {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin: 100px;
+} */
+
+/*  display  */
+/* block inline */
+
+/* div {
+  display: inline-block;
+  width: 1000px;
+  background-color: red;
+}
+
+p {
+  display: inline;
+  background-color: red;
+}
+
+span {
+  display: block;
+  background-color: red;
+} */
+
+span {
+  /* display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red; */
+  /* margin-right: 200px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-bottom: 100px; */
+  /* margin: 10px 20px 30px 40px; */
+}

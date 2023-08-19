@@ -1,0 +1,47 @@
+/* div {
+  background-color: pink;
+}
+
+.contact_container p {
+  color: white;
+}
+
+.contact_container ul > li {
+  color: blue;
+}
+
+.contact_container > a {
+  color: chartreuse;
+} */
+
+/* div .contact_container {
+  background-color: bisque;
+}
+
+div {
+  background-color: pink;
+} */
+
+/* * {
+  background-color: cadetblue;
+} */
+
+/* .card {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+} */
+
+/* .active-card {
+  background-color: pink;
+} */
+/* 
+#card3.card.active-card {
+  background-color: coral;
+} */
+
+/* h1,
+h2,
+div > ul > li a {
+  color: red;
+} */
