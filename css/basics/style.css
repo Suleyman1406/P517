@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color: #9cd1e6;
-}
+} */
 
 div {
   /* width: 200px;
@@ -52,4 +52,93 @@ span {
   margin-left: 100px;
   margin-bottom: 100px; */
   /* margin: 10px 20px 30px 40px; */
+}
+
+/* p {
+  text-align: end;
+} */
+
+/* p {
+  text-decoration: line-through;
+  text-decoration-color: rgba(175, 175, 66, 0.7);
+  text-decoration-thickness: 5px;
+}
+
+a {
+  text-decoration: none;
+} */
+
+/* ul { */
+/* list-style-type: ; */
+/* } */
+/* p { */
+/* text-transform: capitalize; */
+/* text-indent: 100px; */
+/* letter-spacing: 10px; */
+/* line-height: 50px; */
+/* word-spacing: 100px; */
+/* font-size: 60px; */
+/* font-weight: normal; */
+/* font-style: oblique; */
+/* } */
+
+/* span {
+  font-style: italic;
+} */
+
+/* main {
+  width: 80%;
+  background-color: aquamarine;
+} */
+/* body {
+  height: 500px;
+} */
+
+div {
+  /* width: 70%; */
+  /* max-width: 500px;
+  min-width: 450px; */
+  /* height: 80%; */
+  /* min-height: 30px; */
+  /* max-height: 100px; */
+  /* height: 50px; */
+  /* background-color: pink; */
+  /* display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid red; */
+}
+/* .second {
+  margin-left: -50px;
+} */
+/* 
+div {
+  width: 500px;
+  height: 200px;
+  display: inline-block;
+  border: 2px solid red;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-fit: cover;
+  object-position: bottom;
+} */
+
+/* p {
+  white-space: pre-wrap;
+} */
+
+
+div{
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+/* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 87% 30%, 75% 100%, 0% 100%); */
+
 }
