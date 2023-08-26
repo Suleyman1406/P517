@@ -65,7 +65,7 @@ main {
 
 /*  Input design */
 
-.input_container {
+/* .input_container {
   width: 200px;
   position: relative;
   margin: 500px;
@@ -82,4 +82,76 @@ input {
   padding-left: 30px;
   border-radius: 4px;
   border: 2px solid green;
+} */
+
+/* .modal {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 100px;
+  position: relative;
 }
+
+.modal button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+} */
+/* 
+.chat-btn {
+  background-color: rgb(104, 197, 104);
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.chat-btn img {
+  width: 15px;
+} */
+
+/* .topbar {
+  padding: 10px 40px;
+  background-color: blueviolet;
+}
+*/
+/* .navbar {
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background-color: rgb(181, 35, 59);
+}
+
+.reklam,
+.content {
+  width: 33%;
+  height: 20000px;
+  display: inline-block;
+}
+
+.reklam {
+  height: 450px;
+  position: sticky;
+  top: 0px;
+  background-color: aquamarine;
+}
+
+.content {
+  background-color: pink;
+} */
+
+/* .topbar,
+.navbar {
+  padding: 15px 30px;
+  background-color: pink;
+}
+.navbar {
+  position: sticky;
+  top: 200px;
+}
+.topbar {
+  background-color: violet;
+} */
