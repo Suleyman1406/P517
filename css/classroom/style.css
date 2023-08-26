@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+header .navbar .left-side {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+header .navbar .left-side > div {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+header .navbar .left-side > div img {
+  width: 30px;
+}
+header .navbar .left-side > div a {
+  color: rgb(103, 173, 103);
+}
+
+header .navbar .right-side {
+  display: flex;
+  column-gap: 10px;
+}
+header .navbar .right-side button {
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgba(217, 217, 217, 0.678);
+}
+
+header .navbar .right-side button img {
+  width: 7px;
+}
+
+#class-section .class-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 1280px;
+  margin: 30px auto 0;
+  height: 200px;
+}
+
+#class-section .class-container .class {
+  width: 300px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  position: relative;
+}
+#class-section .class-container .class .top_section {
+  height: 100px;
+  padding: 16px;
+  border-bottom: 1px solid rgb(213, 213, 213);
+  background-image: url("https://turlar.az/uploads/news/156102526918266108745d0b5af525eb6.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: scale(1.009);
+  /* background-repeat: no-repeat; */
+}
+
+#class-section .class-container .class .top_section img {
+  width: 6px;
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#class-section .class-container .class .middle_section {
+  height: 200px;
+  border-bottom: 1px solid rgb(213, 213, 213);
+}
+
+#class-section .class-container .class .bottom_section {
+  text-align: end;
+  padding: 16px;
+}
+
+#class-section .class-container .class .bottom_section button {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
