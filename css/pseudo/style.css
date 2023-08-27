@@ -1,0 +1,95 @@
+/* button {
+  border: none;
+  background-color: rgb(202, 202, 95);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: 1s;
+  border: 2px solid transparent;
+}
+
+button:active {
+  transform: translateY(2px);
+} */
+
+/* button:hover { */
+/* background-color: green; */
+/* border-color: aqua; 
+   background-color: red;
+  color: yellow;
+  border-radius: 20px; 
+   transform: scale(1.2); */
+/* } */
+
+/* button:disabled {
+  background-color: grey !important;
+  transform: translateY(0px) !important;
+
+  transform: translate();
+} */
+/* 
+input {
+  margin: 50px;
+  padding: 8px 10px;
+  transition: 0.4s;
+  border: 1px solid green;
+  border-radius: 2px;
+  outline: none;
+}
+
+input:hover {
+  border-color: yellow;
+}
+
+input:focus {
+  border-color: red;
+} */
+/* 
+main div {
+  margin-bottom: 10px;
+}
+
+main div:first-child {
+  background-color: red;
+}
+
+main div:last-child {
+  background-color: aqua;
+}
+
+main span:last-child {
+  background-color: yellow;
+}
+
+main div:nth-child(3) {
+  background-color: pink;
+} */
+
+/* main div:first-child {
+  background-color: red;
+} */
+
+/* p::first-letter {
+  font-size: 30px;
+}
+
+p::first-line {
+  background-color: aquamarine;
+} */
+
+/* input {
+  color: red;
+}
+
+input::placeholder {
+  color: aquamarine;
+  padding: 20px;
+} */
+
+/* ::selection {
+  background-color: red;
+  color: white;
+  user-select: none;
+  background-color: transparent;
+  color: black;
+} */
