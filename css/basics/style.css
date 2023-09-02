@@ -132,13 +132,27 @@ img {
   white-space: pre-wrap;
 } */
 
-
-div{
+/* div{
   width: 200px;
   height: 200px;
   background-color: pink;
-/* clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-clip-path: polygon(25% 0%, 87% 30%, 75% 100%, 0% 100%); */
+clip-path: polygon(25% 0%, 87% 30%, 75% 100%, 0% 100%);
 
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  width: 1000px;
+}
+
+div {
+  width: 100px;
+  height: 100vh;
+  background-color: red;
+} */
