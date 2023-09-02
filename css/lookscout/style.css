@@ -30,6 +30,13 @@ html {
   align-items: center;
 }
 
+#hero_section > header:first-child > nav > button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
 #hero_section > header:first-child > nav > .left-side {
   display: flex;
   align-items: center;
@@ -196,7 +203,7 @@ html {
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  transition: 0.5s;
+  transition: 0.5s transform, 0.4s border;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.5);
 }
 
@@ -245,4 +252,88 @@ html {
   bottom: 3px;
   right: 7px;
   z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 672px;
+    padding: 0;
+  }
+  #hero_section header nav .left-side > div {
+    display: none !important;
+  }
+  #hero_section > header:first-child > nav > button {
+    display: initial;
+  }
+  #hero_section > header:first-child > nav > .right-side {
+    display: none;
+  }
+  #hero_section > div {
+    row-gap: 40px;
+    flex-direction: column;
+  }
+  #hero_section > div > .left-side {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .container {
+    width: 343px;
+  }
+  #hero_section > div > .right-side {
+    width: 343px;
+    height: 343px;
+    padding: 19.6px;
+    gap: 5.8px;
+  }
+  #hero_section > div > .right-side > .card {
+    width: 149px;
+    height: 149px;
+  }
+  #hero_section > div > .right-side > .card > img {
+    width: 31.85px;
+    height: 31.85px;
+  }
+  #hero_section > div > .right-side > .card > p:nth-child(2) {
+    font-size: 15.925px;
+    line-height: 19.93px; /* 125.151% */
+    letter-spacing: -0.159px;
+    margin: 14.9px 0 4.9px;
+  }
+  #hero_section > div > .right-side > .card > p:nth-child(3) {
+    font-size: 12px;
+    line-height: 15px; /* 125% */
+    letter-spacing: -0.061px;
+  }
+  #hero_section > div > .right-side > .dots_top {
+    width: 145.775px;
+    height: 63.088px;
+  }
+  #hero_section > div > .right-side > .dots_bottom {
+    width: 45.937px;
+    height: 42.875px;
+  }
+  #hero_section > div > .right-side > .middle_heart {
+    width: 40.172px;
+    height: 40.992px;
+  }
+  #hero_section > div > .left-side > h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px; /* 122.222% */
+    letter-spacing: -0.72px;
+  }
+  #hero_section > div > .left-side {
+    width: auto;
+  }
+  #hero_section > div > .left-side > .email-field-container {
+    flex-direction: column;
+    width: 100%;
+    row-gap: 16px;
+  }
+  #hero_section > div > .left-side > .email-field-container > input,
+  #hero_section > div > .left-side > .email-field-container > button {
+    border-radius: 6px;
+  }
 }
