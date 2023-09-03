@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
@@ -22,7 +26,15 @@
               <a href="#">Home</a>
               <a href="#">Our Products</a>
               <a href="#">Resources</a>
-              <a href="#">Contacts</a>
+              <a
+                class="animate__swing"
+                style="
+                  animation-duration: 2s;
+                  animation-iteration-count: infinite;
+                "
+                href="#"
+                >Contacts</a
+              >
             </div>
           </div>
           <div class="right-side">
@@ -36,7 +48,9 @@
       </header>
       <div class="container">
         <div class="left-side">
-          <h1>Your Supercharged Design Workflow.</h1>
+          <h1 class="animate__pulse" style="animation-duration: 2s">
+            Your Supercharged Design Workflow.
+          </h1>
           <ul>
             <li>
               <img src="./assets/icons/check.svg" alt="Check Icon" />
@@ -87,5 +101,11 @@
         </div>
       </div>
     </section>
+    <div class="newtons-cradle">
+      <div class="newtons-cradle__dot"></div>
+      <div class="newtons-cradle__dot"></div>
+      <div class="newtons-cradle__dot"></div>
+      <div class="newtons-cradle__dot"></div>
+    </div>
   </body>
 </html>
