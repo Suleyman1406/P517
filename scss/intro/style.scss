@@ -1,0 +1,191 @@
+$primary-color: #369629;
+
+// body {
+//   background-color: $primary-color;
+//   width: 200px;
+//   font-size: 99px;
+// }
+
+// p {
+//   color: $primary-color;
+// }
+
+// ul {
+//   font-size: 40px;
+// }
+// ul li {
+//   background-color: red;
+// }
+
+// ul li:first-child {
+//   font-size: 50px;
+// }
+
+// ul {
+//   font-size: 40px;
+
+//   li {
+//     background-color: red;
+//   }
+// }
+
+// .card {
+//   width: 200px;
+//   height: 200px;
+//   background-color: pink;
+
+//   .heading {
+//     background-color: #369629;
+//     font-size: 20px;
+
+//     h1 {
+//       color: yellow;
+//     }
+//     button {
+//       border-radius: 10px;
+//     }
+//   }
+// }
+
+body {
+  background-color: gray;
+  padding: 100px;
+}
+
+// .card {
+//   width: 100px;
+//   height: 100px;
+//   margin: 50px;
+//   background-color: red;
+// }
+
+// .card.active {
+//   background-color: green;
+// }
+
+// .card {
+//   width: 100px;
+//   height: 100px;
+//   margin: 50px;
+//   background-color: red;
+
+//   &.active {
+//     background-color: green;
+//   }
+// }
+// div {
+//   button {
+//     background-color: red;
+//     padding: 10px 15px;
+//     border: none;
+//     border-radius: 10px;
+//     color: white;
+
+//     &:hover {
+//       background-color: green;
+//     }
+
+//     &:first-child {
+//       background-color: black;
+//       &:hover {
+//         background-color: yellowgreen;
+//       }
+//     }
+//     &:last-child {
+//       background-color: aquamarine;
+//     }
+//   }
+// }
+
+// div {
+//   width: 200px;
+//   height: 200px;
+//   background-color: red;
+//   justify-content: center;
+//   text-indent: 10px;
+// }
+
+// .button {
+//   padding: 20px 30px;
+//   border-radius: 6px;
+// }
+
+// .button-primary {
+//   @extend .button;
+//   background-color: blue;
+// }
+
+// @mixin center-in-element {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// div {
+//   width: 200px;
+//   height: 200px;
+//   background-color: pink;
+// }
+
+// main {
+//   height: 300px;
+//   background-color: #369629;
+//   @include center-in-element;
+// }
+
+// @mixin button($padding, $border-width: 1px, $bg-color) {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: $padding;
+//   background-color: $bg-color;
+//   border: $border-width solid $bg-color;
+// }
+
+// div button {
+//   margin: 20px;
+//   &:first-child {
+//     // @include button(5px 10px, blue);
+//   }
+//   &:nth-child(2) {
+//     @include button($bg-color: red, $padding: 20px 10px);
+//   }
+//   &:last-child {
+//     // @include button(5px 10px, green, 0);
+//   }
+// }
+
+// .navbar {
+//   padding: 20px 30px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   &__logo {
+//     padding: 10px;
+//   }
+//   &__navigations {
+//     display: flex;
+//     column-gap: 30px;
+
+//     a {
+//       color: var(--light-text);
+//       text-decoration: none;
+//       padding: 10px;
+//       font-size: 16px;
+//       font-weight: 500;
+//       line-height: 24px; /* 150% */
+//       letter-spacing: 0.2px;
+//       transition: 0.3s;
+
+//       &:hover {
+//         color: $primary-color;
+//       }
+//     }
+//   }
+// }
+
+@for $i from 1 through 100 {
+  .item-#{$i} {
+    left: 20px * $i;
+  }
+}
