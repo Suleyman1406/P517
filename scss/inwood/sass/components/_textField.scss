@@ -1,0 +1,27 @@
+.primary-input-container {
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 32px;
+    top: 32px;
+  }
+  input {
+    width: 100%;
+    padding: 32px 24px 32px 70px;
+    border: none;
+    border-radius: 10px;
+    background-color: $gray-extra-light;
+    outline: none;
+    transition: 0.3s;
+    @include text-formatter(20px, 400);
+
+    &::placeholder {
+      color: $gray-extra-dark;
+      @include text-formatter(20px, 400);
+    }
+    &:focus {
+      background-color: $gray-dark;
+    }
+  }
+}

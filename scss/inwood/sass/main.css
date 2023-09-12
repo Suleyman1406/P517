@@ -2,6 +2,11 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -89,8 +94,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -133,4 +136,168 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+}
+
+.primary-input-container {
+  position: relative;
+}
+.primary-input-container img {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+}
+.primary-input-container input {
+  width: 100%;
+  padding: 32px 24px 32px 70px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+.primary-input-container input::-webkit-input-placeholder {
+  color: #6e757e;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+.primary-input-container input::-moz-placeholder {
+  color: #6e757e;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+.primary-input-container input:-ms-input-placeholder {
+  color: #6e757e;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+.primary-input-container input::-ms-input-placeholder {
+  color: #6e757e;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+.primary-input-container input::placeholder {
+  color: #6e757e;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+}
+.primary-input-container input:focus {
+  background-color: rgba(112, 144, 139, 0.1019607843);
+}
+
+#home-page {
+  background-color: #fdfbf8;
+}
+#home-page .container {
+  width: 1680px;
+  margin: auto;
+}
+#home-page .explore {
+  padding: 180px 30px;
+}
+#home-page .explore__heading {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+  font-style: normal;
+  color: #07484a;
+  text-align: center;
+}
+#home-page .explore__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 350px auto;
+  margin-top: 100px;
+}
+#home-page .explore__content__filter {
+  position: relative;
+}
+#home-page .explore__content__filter__category-list {
+  width: 100%;
+  overflow-y: auto;
+  margin-top: 66px;
+  height: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 110px;
+}
+#home-page .explore__content__filter__category-list::-webkit-scrollbar-thumb {
+  background-color: #07484a;
+}
+#home-page .explore__content__filter__category-list::-webkit-scrollbar {
+  width: 10px;
+}
+#home-page .explore__content__filter__category-list::-webkit-scrollbar-track::before {
+  content: "test";
+}
+#home-page .explore__content__filter__category-list::-webkit-scrollbar-track {
+  background-color: #70908b;
+}
+#home-page .explore__content__filter__category-list__item {
+  text-decoration: none;
+  color: #07484a;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#home-page .explore__content__filter__category-list__item:hover {
+  color: #6e757e;
+}
+.test {
+  height: 750px;
+  position: relative;
+}
+.test div:last-child {
+  background-color: #fdfbf8;
+  padding: 30px;
+  position: absolute;
+  right: -44px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+.test div:last-child button {
+  padding: 15px 17px;
+  border-radius: 50%;
+  border: none;
+  bottom: 40px;
+}
+.test div:last-child button:first-child {
+  background-color: #e0eff6;
+}
+.test div:last-child button:last-child {
+  background-color: #f9d9da;
 }
