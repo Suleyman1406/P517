@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$containerWidth: 1280px;
+
+@mixin theme($theme) {
+  @if $theme == dark {
+    background-color: black;
+    color: white;
+  } @else if $theme == light {
+    color: black;
+    background-color: white;
+  }
+}
+
+body {
+  @include theme(dark);
+}
+
+.container {
+  width: $containerWidth;
+  margin: auto;
+  padding: 32px 0;
+}
+
+.navbar {
+  @include theme(light);
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+  }
+  &__nav-items {
+    &__item {
+      padding: 20px 30px;
+      border: none;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      transition: 0.3s;
+      cursor: pointer;
+      &--primary {
+        margin-right: 10px;
+        background-color: red;
+        background-color: green;
+      }
+      &--secondary {
+        background-color: gray;
+        padding: 20px 30px;
+        border: none;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@mixin for-size($type) {
+  @if $type == tablet {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+  } @else if $type == mobile {
+    @media screen and (max-width: 768px) {
+    }
+  }
+}
+
+@include for-size(tablet) {
+  .container {
+    width: 768px;
+  }
+  body {
+    @include theme(light);
+  }
+}
+
+// @media screen and (max-width: 1280px) {
+//   .container {
+//     width: 768px;
+//   }
+//   body {
+//     @include theme(light);
+//   }
+//   .navbar {
+//     @include theme(dark);
+//   }
+// }
+// @media screen and (max-width: 768px) {
+//   .container {
+//     width: 400px;
+//   }
+// }
