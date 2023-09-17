@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="p-56">
+    <style>
+      .debit-card {
+        cursor: pointer;
+      }
+      .debit-card > div {
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+      }
+
+      /* @keyframes rotateA {
+        from {
+          transform: rotateY(0deg);
+          z-index: 1;
+        }
+        to {
+          transform: rotateY(90deg);
+          z-index: 999;
+        }
+      } */
+
+      .debit-card > div:first-child {
+        /* display: none; */
+        transition-delay: 0;
+        transform: rotateY(90deg);
+      }
+      .debit-card:hover > div:first-child {
+        /* transition-delay: 0.3s;
+        transform: rotateY(180deg); */
+        transition-delay: 0.3s;
+        transform: rotateY(180deg);
+      }
+
+      .debit-card > div:last-child {
+        /* transition-delay: 0.3s;
+        transform: rotateY(0deg); */
+        transform: rotateY(0deg);
+        transition-delay: 0.3s;
+      }
+      .debit-card:hover > div:last-child {
+        /* transition-delay: 0s;
+        transform: rotateY(90deg); */
+        transition-delay: 0s;
+        transform: rotateY(90deg);
+      }
+    </style>
+    <div class="debit-card w-[231px] h-[147px] relative">
+      <div
+        class="w-full h-full rounded-[7px] absolute top-0 left-0"
+        style="background-color: border-radius: 7px;
+background: linear-gradient(248deg, #FF4D00 2.14%, #ED832A 98.38%); "
+      >
+        <div class="relative w-full h-full" style="transform: rotateY(180deg)">
+          <div
+            class="pl-2 pr-1 py-[3px] tracking-[0.08px] text-[4px] flex gap-x-[3px]"
+          >
+            <p>
+              This card is issued by Swedbank pursuant to licence by Mastercard
+              International.
+            </p>
+          </div>
+          <div class="w-full h-[35px] bg-black"></div>
+          <p
+            class="mt-[3px] ml-[10px] text-[#693D30] text-[13px] font-bold tracking-[0.065px]"
+          >
+            5167 3810 1139 5591
+          </p>
+          <p
+            class="text-[#693D30] text-[9px] font-bold tracking-[0.045px] ml-[10px] mt-[5px] mb-[16px]"
+          >
+            DENISS MIHHAILOV
+          </p>
+          <img
+            src="./images/holographic.png"
+            alt=""
+            class="absolute right-[11px] bottom-[24px] w-[47px] h-[31px]"
+          />
+          <p
+            class="text-white text-[4.3px] font-semibold absolute bottom-1 left-2"
+          >
+            SWEDBANK: ESTONIA, TEL. +372 631 0310,LATVIA, TEL.+371 6744 4444,<br />
+            LITHUANIA, TEL +370 5 268 4444
+          </p>
+        </div>
+      </div>
+      <div
+        class="w-full h-full bg-[#FF4D00] rounded-[7px] absolute top-0 left-0"
+      >
+        <div class="relative w-full h-full">
+          <h1
+            class="absolute left-4 top-[13px] text-[11px] text-white not-italic font-bold"
+          >
+            debit
+          </h1>
+          <img
+            src="./images/logo.png"
+            alt=""
+            class="absolute top-[10px] right-[11px] z-[1]"
+          />
+          <img
+            src="./images/back-tree.png"
+            alt=""
+            class="absolute top-[14px] left-[28px]"
+          />
+          <img
+            src="./images/chip.png"
+            alt=""
+            class="absolute top-[50px] left-[27px]"
+          />
+          <img
+            src="./images/master-card.png"
+            alt=""
+            class="absolute bottom-[11px] right-[11px]"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
