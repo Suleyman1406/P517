@@ -286,3 +286,113 @@ Example:
 // }
 
 // console.log(swapNeighboors([1, 2, 3, 4, 5, 6, 7, 8]));
+
+// function isPalindrome(num) {
+//   let stringNum = num + "";
+//   let reversedNum = stringNum.split("").reverse().join("");
+//   let intReversedNum = parseInt(reversedNum);
+//   console.log(num === intReversedNum);
+// }
+
+// isPalindrome(121);
+
+// function sumOf4MinAndMax(nums) {
+//   if (nums.length < 5) {
+//     console.log("Length must be at least 5!");
+//     return;
+//   }
+//   let sortedNums = nums.sort((function (a, b) {
+//     return a - b;
+//   }));
+//   let sumOfMinNums = 0;
+//   for (let i = 0; i < 4; i++) {
+//     sumOfMinNums += sortedNums[i];
+//   }
+//   console.log("Min:" + sumOfMinNums);
+//   let sumOfMaxNums = 0;
+//   for (let j = sortedNums.length - 1; j > sortedNums.length - 5; j--) {
+//     sumOfMaxNums += sortedNums[j];
+//   }
+//   console.log("Max:" + sumOfMaxNums);
+// }
+// sumOf4MinAndMax([1, 2, 1, 3, 1, 45, 3]);
+
+// function getHourMinSec(second) {
+//   let hour = Math.floor(second / 3600);
+//   let min = Math.floor((second - hour * 3600) / 60);
+//   let sec = second - (hour * 3600 + min * 60);
+//   console.log(hour + "h", min + "m", sec + "s");
+// }
+// getHourMinSec(7000);
+
+// function sumOf4MinAndMax(arr) {
+//   let myNewArr = [...arr].sort((a, b) => a - b);
+//   console.log(myNewArr);
+
+// let min = myNewArr.reduce(
+//   (prev, val, idx) => (idx < 4 ? prev + val : prev),
+//   0
+// );
+// let max = myNewArr.reduce(
+//   (prev, val, idx, arr) => (idx > arr.length - 5 ? prev + val : prev),
+//   0
+// );
+//   let min = myNewArr[0] + myNewArr[1] + myNewArr[2] + myNewArr[3];
+//   let max =
+//     myNewArr.at(-1) + myNewArr.at(-2) + myNewArr.at(-3) + myNewArr.at(-4);
+//   console.log("min", min, "max", max);
+// }
+
+// let myArr = [1, 5, 2, 4, 8, 12, 3, -2];
+// sumOf4MinAndMax(myArr);
+
+// console.log("kohne ar", myArr);
+
+// let arr = [3, 5, 9, 11];
+// let res = arr.pop();
+// console.log("res", res);
+// console.log(arr);
+
+// let myArr = [1, 2, 3, 4, 5];
+// console.log(myArr.indexOf(20));
+
+// let res = myArr.map((a) => a % 2 === 0);
+// console.log(res);
+
+// console.log(new Array(5, 9, 9, 2));
+
+// let m
+// 3 6 9
+// 18 /3 = 6
+// 3/3 + 6/3 + 9/3 = 6
+// 0 + 8/4 + 12/4+  16/4 + 20/4 = 2 +3 + 4+ 5
+// 0 + 8/4 = 2 prev
+// (2+ 12)/4 == 3.5
+// 2 + 12/4 = 5
+
+let students = [
+  {
+    name: "Suleyman",
+    age: 8,
+  },
+  {
+    name: "Nigar",
+    age: 12,
+  },
+  {
+    name: "Kamil",
+    age: 16,
+  },
+  {
+    name: "Aqil",
+    age: 20,
+  },
+];
+
+console.log(
+  students.filter(
+    (st) =>
+      st.age >
+      students.reduce((prev, val, _, arr) => (prev + val.age) / arr.length, 0)
+  )[1].name
+);
