@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 100px;
+      }
+      .dropdown-container {
+        width: 200px;
+        position: relative;
+      }
+      .dropdown-select {
+        position: relative;
+        width: 100%;
+      }
+      .dropdown-select input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid rgb(112, 112, 207);
+      }
+      .dropdown-select img {
+        position: absolute;
+        top: 10px;
+        cursor: pointer;
+      }
+      .dropdown-select img:nth-child(2) {
+        display: none;
+        right: 30px;
+      }
+      .dropdown-select img:last-child {
+        right: 10px;
+      }
+
+      .dropdown-menu {
+        display: none;
+        max-height: 200px;
+        overflow: auto;
+        position: absolute;
+        top: 35px;
+        border-radius: 4px;
+        width: 100%;
+        /* padding-bottom: 10px; */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+      .open {
+        display: initial;
+      }
+      .dropdown-menu .option {
+        padding: 10px 8px;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(112, 112, 207);
+      }
+
+      .dropdown-menu .option:last-child {
+        border-bottom: none;
+      }
+
+      .dropdown-menu .option:hover {
+        background-color: rgba(112, 112, 207, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown-container">
+      <div class="dropdown-select">
+        <input type="text" placeholder="Write for search" />
+        <img src="./icons/close.svg" alt="" />
+        <img src="./icons/down.svg" alt="" />
+      </div>
+      <div class="dropdown-menu"></div>
+    </div>
+
+    <!-- <div id="out">
+      <div id="middle">
+        <div id="inside">hello</div>
+      </div>
+    </div> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
