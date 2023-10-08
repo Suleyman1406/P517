@@ -81,15 +81,35 @@ console.log();
 // const thirdBtn = document.querySelector("button:last-child");
 // thirdBtn.remove();
 
-const newBtnElement = document.createElement("button");
-newBtnElement.textContent = "sen bir butonsan";
+// const newBtnElement = document.createElement("button");
+// newBtnElement.textContent = "sen bir butonsan";
 
-const myDivElement = document.querySelector("div");
+// const myDivElement = document.querySelector("div");
 
-myDivElement.append(newBtnElement);
+// myDivElement.append(newBtnElement);
 
-myDivElement.removeChild(newBtnElement);
+// myDivElement.removeChild(newBtnElement);
 
-myDivElement.remove();
+// myDivElement.remove();
 
 // document.body.remove();
+
+const buttonElement = document.createElement("button");
+buttonElement.textContent = "hello guys";
+// buttonElement.id = "test";
+
+buttonElement.onclick = () => {
+  console.log(buttonElement.classList);
+
+  buttonElement.classList.toggle("button-bg");
+
+  // if (buttonElement.classList.contains("button-bordered")) {
+  //   buttonElement.classList.remove("button-bordered");
+  //   buttonElement.classList.add("button-bg");
+  // } else {
+  //   buttonElement.classList.remove("button-bg");
+  //   buttonElement.classList.add("button-bordered");
+  // }
+};
+
+document.body.append(buttonElement);
