@@ -1,12 +1,12 @@
 const productContainer = document.querySelector(
   "#product-section > div > .product-container"
 );
-const productBadge = document.querySelector("#basket-btn-container .badge");
-const basketBtn = document.querySelector("#basket-btn-container");
+const productBadge = document.querySelector("#favorite-btn-container .badge");
+const favoriteBtn = document.querySelector("#favorite-btn-container");
 
-basketBtn.addEventListener("click", () => {
+favoriteBtn.addEventListener("click", () => {
   window.open(
-    `http://127.0.0.1:5500/dom/e-commerce/pages/basket/index.html`,
+    `http://127.0.0.1:5500/dom/e-commerce/pages/favorite/index.html`,
     "_self"
   );
 });
@@ -20,13 +20,13 @@ products.forEach((p) => {
   productName.textContent = p.name;
   const productPrice = document.createElement("p");
   productPrice.textContent = p.price;
-  const toggleBasketProductBtn = document.createElement("button");
-  toggleBasketProductBtn.textContent = getIsInBasket(p.id)
+  const togglefavoriteProductBtn = document.createElement("button");
+  togglefavoriteProductBtn.textContent = getIsInfavorite(p.id)
     ? "Sebetden cixar"
     : "Sebete Elave Et";
 
-  toggleBasketProductBtn.addEventListener("click", () => {
-    toggleBasketItem(p.id, toggleBasketProductBtn);
+  togglefavoriteProductBtn.addEventListener("click", () => {
+    togglefavoriteItem(p.id, togglefavoriteProductBtn);
   });
 
   const goDetailBtn = document.createElement("button");
@@ -35,7 +35,7 @@ products.forEach((p) => {
     productImg,
     productName,
     productPrice,
-    toggleBasketProductBtn,
+    togglefavoriteProductBtn,
     goDetailBtn
   );
   goDetailBtn.addEventListener("click", () => {
@@ -47,33 +47,33 @@ products.forEach((p) => {
   productContainer.append(productDiv);
 });
 
-function toggleBasketItem(productId, toggleBasketProductBtn) {
-  const basketItems = getBasketItems();
-  let idx = basketItems.findIndex((pId) => pId === productId);
+function togglefavoriteItem(productId, togglefavoriteProductBtn) {
+  const favoriteItems = getfavoriteItems();
+  let idx = favoriteItems.findIndex((pId) => pId === productId);
 
   if (idx === -1) {
-    basketItems.push(productId);
-    toggleBasketProductBtn.textContent = "Sebetden cixar";
+    favoriteItems.push(productId);
+    togglefavoriteProductBtn.textContent = "Sebetden cixar";
   } else {
-    basketItems.splice(idx, 1);
-    toggleBasketProductBtn.textContent = "Sebete Elave et";
+    favoriteItems.splice(idx, 1);
+    togglefavoriteProductBtn.textContent = "Sebete Elave et";
   }
 
-  fillBasketBadge(basketItems.length);
-  localStorage.setItem("basket", JSON.stringify(basketItems));
+  fillfavoriteBadge(favoriteItems.length);
+  localStorage.setItem("favorite", JSON.stringify(favoriteItems));
 }
 
-function getBasketItems() {
-  return JSON.parse(localStorage.getItem("basket")) ?? [];
+function getfavoriteItems() {
+  return JSON.parse(localStorage.getItem("favorite")) ?? [];
 }
 
-function getIsInBasket(productId) {
-  const basketItems = getBasketItems();
-  return basketItems.some((id) => id == productId);
+function getIsInfavorite(productId) {
+  const favoriteItems = getfavoriteItems();
+  return favoriteItems.some((id) => id == productId);
 }
 
-function fillBasketBadge(count) {
+function fillfavoriteBadge(count) {
   productBadge.textContent = count;
 }
 
-fillBasketBadge(getBasketItems().length);
+fillfavoriteBadge(getfavoriteItems().length);

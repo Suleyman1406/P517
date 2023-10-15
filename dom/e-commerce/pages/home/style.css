@@ -22,10 +22,10 @@
   font-size: 20px;
 }
 
-#basket-btn-container {
+#favorite-btn-container {
   position: relative;
 }
-#basket-btn-container .badge {
+#favorite-btn-container .badge {
   min-width: 16px;
   min-height: 16px;
   position: absolute;
