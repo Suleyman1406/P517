@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      html,
-      body {
-        scroll-behavior: smooth;
-      }
-
       .container {
         width: 1280px;
         margin: auto;
+      }
+      .navbar button {
+        position: relative;
+      }
+      #basket-item-count-badge {
+        position: absolute;
+        top: -10px;
+        padding: 6px;
+        right: 0;
+        border-radius: 50%;
+        color: white;
+        background-color: red;
       }
       .navbar {
         display: flex;
@@ -90,7 +97,10 @@
   <body>
     <div class="navbar container">
       <a href="#">Logo</a>
-      <button>Basket</button>
+      <button id="basket-btn">
+        Basket
+        <span id="basket-item-count-badge">3</span>
+      </button>
     </div>
     <div class="container">
       <h1>Products</h1>

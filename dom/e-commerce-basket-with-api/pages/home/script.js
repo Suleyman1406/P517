@@ -2,6 +2,17 @@ const API_BASE_URL = "https://northwind.vercel.app/api";
 const LOCAL_STORAGE_BASKET_KEY = "basket";
 const skeletonElements = document.querySelectorAll(".card.is-loading");
 const cardsContainerElement = document.querySelector(".cards");
+const basketItemCountBadgeElement = document.querySelector(
+  "#basket-item-count-badge"
+);
+
+const basketBtn = document.querySelector("button");
+
+basketBtn.addEventListener("click", () => {
+  window.open(
+    "http://127.0.0.1:5500/dom/e-commerce-basket-with-api/pages/basket/index.html#"
+  );
+});
 
 async function getProductsFromApi() {
   let data = null;
@@ -74,6 +85,7 @@ function addProductToBasket(product) {
     updateQuantityOfProductInLocalStorage(basketItem, basketItems);
   } else {
     addProductToLocalStorage(product, basketItems);
+    fillBasketItemCountBadge(basketItems.length);
   }
 }
 
@@ -107,4 +119,14 @@ function sortProductArr(products) {
   products.sort((productA, productB) => productA.id - productB.id);
 }
 
+function fillBasketItemCountBadge(count) {
+  if (count) {
+    basketItemCountBadgeElement.style.display = "initial";
+    basketItemCountBadgeElement.textContent = count;
+  } else {
+    basketItemCountBadgeElement.style.display = "none";
+  }
+}
+
+fillBasketItemCountBadge(getBasketItemsFromLocatStorage().length);
 fillProductsToCards();
