@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 30px;
+      }
+      #product-form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+      }
+      #product-form p {
+        margin-bottom: 10px;
+        height: 20px;
+        color: red;
+      }
+
+      .submit-btn {
+        padding: 8px;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+      }
+
+      .edit .submit-btn,
+      .edit-btn,
+      .cancel-btn {
+        display: none;
+      }
+
+      .edit .edit-btn,
+      .edit .cancel-btn {
+        display: initial;
+      }
+
+      .submit-btn.loading .loader {
+        display: inline-block;
+      }
+
+      .loader {
+        display: none;
+        width: 16px;
+        height: 16px;
+        border: 5px solid #7e2222;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form id="product-form">
+      <input placeholder="name" type="text" />
+      <p></p>
+      <input placeholder="unit price" type="text" />
+      <p></p>
+      <input placeholder="quantity per unit" type="text" />
+      <p></p>
+
+      <button class="submit-btn">
+        <span class="loader"></span>
+        Submit
+      </button>
+      <button class="edit-btn">Edit</button>
+      <button type="button" class="cancel-btn">Cancel</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Unit Price</th>
+          <th>Quantity Per Unit</th>
+          <th>Operations</th>
+        </tr>
+      </thead>
+      <tbody class="products-container"></tbody>
+    </table>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
